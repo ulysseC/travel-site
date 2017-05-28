@@ -1,5 +1,9 @@
 var gulp = require('gulp'),
-watch= require('gulp-watch');
+watch = require('gulp-watch'),
+postcss = require('gulp-postcss'),
+autoprefixer = require('autoprefixer'),
+cssvars = require('postcss-simple-vars'),
+nested = require('postcss-nested');
 
 gulp.task('default',function(){
   console.log("Nahnah");
@@ -9,7 +13,11 @@ gulp.task('html', function(){
   console.log("holla");
 });
 gulp.task('styles', function(){
-  console.log("imagine");
+   return gulp.src('./app/assets/styles/styles.css')
+     .pipe(postcss([ cssvars, nested, autoprefixer]))
+     .pipe(gulp.dest('./app/temp/styles'))
+     .pipe(gulp.dest('./app/temp2/styles'))
+     .pipe(gulp.dest('./app/temp3/styles'));
 });
 gulp.task('watch',function(){
 
@@ -17,7 +25,7 @@ gulp.task('watch',function(){
     gulp.start('html');
   });
 
-  watch('./app/asets/styles/**/*.css', function(){
-    gulp.start('imagine');
+  watch('./app/assets/styles/**/*.css', function(){
+    gulp.start('styles');
   });
 });

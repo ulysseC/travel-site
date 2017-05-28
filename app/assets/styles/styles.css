@@ -1,1 +1,17 @@
-odkc
+$mainBlue: #2f5572;
+body{
+  color: $mainBlue;
+  padding: 25px;
+  margin-left: 2px;
+  columns:300px 2;
+}
+.box{
+  a{
+    color: $mainBlue;
+    columns: 300px 2;
+  }
+  p{
+    color: $mainBlue;
+    columns: 300px 2;
+  }
+}

@@ -1,0 +1,20 @@
+body{
+  color: #2f5572;
+  padding: 25px;
+  margin-left: 2px;
+  -webkit-columns:300px 2;
+     -moz-columns:300px 2;
+          columns:300px 2;
+}
+.box a{
+    color: #2f5572;
+    -webkit-columns: 300px 2;
+       -moz-columns: 300px 2;
+            columns: 300px 2;
+  }
+.box p{
+    color: #2f5572;
+    -webkit-columns: 300px 2;
+       -moz-columns: 300px 2;
+            columns: 300px 2;
+  }
